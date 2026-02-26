@@ -13,7 +13,7 @@
     "linux",
     "electron"
   ],
-  "author": "Antigravity",
+  "author": "Boominathan2355 <boominathan2355@gmail.com>",
   "license": "MIT",
   "devDependencies": {
     "electron": "^31.0.0",
@@ -39,4 +39,3 @@
     }
   }
 }
-
