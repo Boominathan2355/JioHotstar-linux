@@ -4,7 +4,7 @@
   "description": "A premium JioHotstar desktop application for Linux.",
   "main": "src/main/main.js",
   "scripts": {
-    "start": "electron .",
+    "start": "electron . --no-sandbox",
     "dist": "electron-builder --linux",
     "pack": "electron-builder --dir"
   },
