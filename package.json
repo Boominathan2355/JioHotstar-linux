@@ -27,9 +27,12 @@
   },
   "build": {
     "appId": "com.jiohotstar.linux",
-    "productName": "JioHotstar",
-    "executableName": "jiohotstar",
+    "productName": "jiohotstar-linux",
+    "executableName": "jiohotstar-linux",
     "linux": {
+      "desktop": {
+        "StartupWMClass": "jiohotstar-linux"
+      },
       "target": [
         "AppImage",
         "deb"

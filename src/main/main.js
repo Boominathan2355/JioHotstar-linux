@@ -19,18 +19,16 @@ async function setupModules() {
 
 function createWindow() {
     const windowState = store.get('windowState') || {
-        width: 450,
+        width: 1200,
         height: 800
     };
-
-    const mobileUA = 'Mozilla/5.0 (Linux; Android 15; CPH2629 Build/UKQ1.230924.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/130.0.6723.107 Mobile Safari/537.36 ColorOS/16.0.2';
 
     mainWindow = new BrowserWindow({
         width: windowState.width,
         height: windowState.height,
         x: windowState.x,
         y: windowState.y,
-        minWidth: 360,
+        minWidth: 800,
         minHeight: 600,
         title: 'JioHotstar',
         icon: path.join(__dirname, '../../assets/icon.png'),
@@ -43,20 +41,25 @@ function createWindow() {
         }
     });
 
-    // Set User Agent to emulate a mobile device
-    mainWindow.webContents.setUserAgent(mobileUA);
-
-    // Basic Ad-blocking using onBeforeRequest (simulating DNS ad-block)
+    // Basic Ad-blocking using onBeforeRequest (simulating AdGuard DNS)
     const filter = {
         urls: [
             "*://*.doubleclick.net/*",
             "*://*.google-analytics.com/*",
             "*://*.googlesyndication.com/*",
             "*://*.googletagservices.com/*",
+            "*://*.googletagmanager.com/*",
             "*://*.hotstar.com/ads/*",
             "*://*.hotstar.com/v1/ads/*",
             "*://*.hotstar.com/v1/event/*",
-            "*://*.omtrdc.net/*"
+            "*://*.omtrdc.net/*",
+            "*://*.crashlytics.com/*",
+            "*://*.scorecardresearch.com/*",
+            "*://*.adguard.com/*",
+            "*://*.adnxs.com/*",
+            "*://*.adsystem.com/*",
+            "*://*.adservice.google.com/*",
+            "*://*.adservice.google.co.in/*"
         ]
     };
 
@@ -66,6 +69,7 @@ function createWindow() {
 
     // Load JioHotstar
     mainWindow.loadURL('https://www.hotstar.com/in/home');
+
 
 
     // Save window state on close
