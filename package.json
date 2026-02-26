@@ -5,11 +5,11 @@
   "main": "src/main/main.js",
   "scripts": {
     "start": "electron . --no-sandbox",
-    "dist": "electron-builder --linux",
-    "pack": "electron-builder --dir"
+    "dist": "electron-builder --linux --no-sandbox",
+    "pack": "electron-builder --dir --no-sandbox"
   },
   "keywords": [
-    "jiohotstar",
+    "jiohotstar", 
     "linux",
     "electron"
   ],
