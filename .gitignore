@@ -3,7 +3,6 @@ dist/
 .DS_Store
 *.log
 .env
-package-lock.json
 electron-builder-debug.yml
 win-unpacked/
 linux-unpacked/
