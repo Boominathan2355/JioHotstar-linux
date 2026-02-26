@@ -27,13 +27,14 @@
   "build": {
     "appId": "com.jiohotstar.linux",
     "productName": "JioHotstar",
+    "executableName": "jiohotstar",
     "linux": {
       "target": [
         "AppImage",
         "deb"
       ],
       "category": "Video",
-      "icon": "assets/icon.png"
+      "icon": "build/icon.png"
     },
     "directories": {
       "output": "dist"
