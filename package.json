@@ -1,0 +1,42 @@
+{
+  "name": "jiohotstar-linux",
+  "version": "1.0.0",
+  "description": "A premium JioHotstar desktop application for Linux.",
+  "main": "src/main/main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --linux",
+    "pack": "electron-builder --dir"
+  },
+  "keywords": [
+    "jiohotstar",
+    "linux",
+    "electron"
+  ],
+  "author": "Antigravity",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^31.0.0",
+    "electron-builder": "^24.13.3"
+  },
+  "dependencies": {
+    "electron-context-menu": "^4.1.1",
+    "electron-store": "^8.1.0"
+  },
+  "build": {
+    "appId": "com.jiohotstar.linux",
+    "productName": "JioHotstar",
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ],
+      "category": "Video",
+      "icon": "assets/icon.png"
+    },
+    "directories": {
+      "output": "dist"
+    }
+  }
+}
+
